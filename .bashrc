@@ -21,6 +21,11 @@ alias cdpapers="cd /software/dist/newspaper/newspaper/papers"
 alias cdscrapers="cd /prod/www/apache/htdocs/autoasp/scrapers"
 alias cdmachines="cd /software/dist/types"
 
+alias cdwm4="cd /prod/www/apache/htdocs/scripts/wundermap/src/wu4/dev"
+alias cds="cd /prod/www/apache/htdocs/scss"
+alias cdjs="cd /prod/www/apache/htdocs/scripts/"
+alias cdwmt="cd /prod/www/template/omnibus/Pages/WunderMap"
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 		. /etc/bashrc
@@ -28,8 +33,9 @@ fi
 
 export WUI_BUILD_ROOT=/code
 
-# User specific environment and startup programs
+export PATH=/code/3rdparty/imagemagick/ImageMagick-6.8.7-6/utilities:$PATH:/code/mapgen/mgprograms
 
+# User specific environment and startup programs
 PATH=$PATH:$HOME/bin
 
 export PATH
