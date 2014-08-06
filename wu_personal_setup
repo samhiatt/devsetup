@@ -5,3 +5,13 @@ yum -y install ImageMagick-devel.x86_64
 yum -y install gperftools-libs.x86_64
 yum -y install liboauth.x86_64
 yum -y install liboauth-devel.x86_64
+
+# Set up cloud9
+yum -y install npm
+cd ~
+git clone https://github.com/ajaxorg/cloud9.git
+cd cloud9
+npm install
+bin/cloud9.sh -l 0.0.0.0 -p 3131 -w /prod/www --username sam --password samsmaps37 &
+cd ~
+
