@@ -7,8 +7,8 @@ yum -y install liboauth.x86_64
 yum -y install liboauth-devel.x86_64
 
 # Install couchDB and start
-yum -y install couchdb
-couchdb -b
+#yum -y install couchdb
+#couchdb -b
 
 # Set up cloud9
 yum -y install npm
@@ -19,6 +19,9 @@ npm install
 npm install -g forever
 forever start server.js -l 0.0.0.0 -p 3131 -w /prod/www --username sam --password samsmaps37 -a x-www-broswer
 cd ~
+
+npm install -g repl.history
+npm install -g bower
 
 # install dependencies for backbone-boilerplate
 #npm install -g grunt-cli bower
