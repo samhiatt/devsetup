@@ -12,13 +12,13 @@ yum -y install liboauth-devel.x86_64
 
 # Set up cloud9
 yum -y install npm
-cd ~
-git clone https://github.com/ajaxorg/cloud9.git
-cd cloud9
-npm install
-npm install -g forever
-forever start server.js -l 0.0.0.0 -p 3131 -w /prod/www --username sam --password samsmaps37 -a x-www-broswer
-cd ~
+#cd ~
+#git clone https://github.com/ajaxorg/cloud9.git
+#cd cloud9
+#npm install
+#npm install -g forever
+#forever start server.js -l 0.0.0.0 -p 3131 -w /prod/www --username sam --password samsmaps37 -a x-www-broswer
+#cd ~
 
 npm install -g repl.history
 npm install -g bower
@@ -29,3 +29,10 @@ npm install -g bower
 #npm install
 #bower install
 #cd ~
+
+sh -c 'wget -qO- http://people.redhat.com/bkabrda/scl_python27.repo >> /etc/yum.repos.d/scl.repo'
+yum install python27
+
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+python2.7 ez_setup.py
+easy_install-2.7 pip
