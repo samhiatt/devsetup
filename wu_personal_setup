@@ -31,7 +31,7 @@ npm install -g bower
 #cd ~
 
 sh -c 'wget -qO- http://people.redhat.com/bkabrda/scl_python27.repo >> /etc/yum.repos.d/scl.repo'
-yum install python27
+yum -y install python27
 
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 python2.7 ez_setup.py
