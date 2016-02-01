@@ -36,3 +36,7 @@ yum -y install python27
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 python2.7 ez_setup.py
 easy_install-2.7 pip
+
+cd ~
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
+echo "\nsource ~/.bash-git-prompt/gitprompt.sh\nGIT_PROMPT_ONLY_IN_REPO=1\nGIT_PROMPT_END=\"\n\u@\h \t $ \"\n" >> ~/.bashrc

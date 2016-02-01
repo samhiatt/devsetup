@@ -43,3 +43,24 @@ export PATH
 
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+
+#export GIT_PROMPT_ONLY_IN_REPO=1
+#export GIT_PROMPT_END="\n\u@\h \t $ "
+#source ~/.bash-git-prompt/gitprompt.sh
+
+# Source the git bash completion file
+if [ -f /etc/bash_completion.d/git ]; then
+	source /etc/bash_completion.d/git
+	GIT_PS1_SHOWDIRTYSTATE=1
+	GIT_PS1_SHOWSTASHSTATE=1
+	PS1='\u@\e[1;32m\]\h\e[0m\]\e[1;34m\] (dev-sam)$(__git_ps1)\e[0m\]:\n\w \$ '
+  if [ "$(__git_ps1)" == " (master)" ]; then
+      PS1='\u@\e[1;32m\]\h\e[0m\]\e[1;31m\] (dev-sam)$(__git_ps1)\e[0m\]:\n\w \$ '
+  fi
+  if [ "$(__git_ps1)" == " (master *)" ]; then
+      PS1='\u@\e[1;32m\]\h\e[0m\]\e[1;31m\] (dev-sam)$(__git_ps1)\e[0m\]:\n\w \$ '
+  fi
+fi
+
+export PS1
+cd  ~
